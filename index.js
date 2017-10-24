@@ -59,7 +59,7 @@ function inspectLength(length) {
   length = /(-?\d*\.?\d+)(ch|em|ex|px|rem)/.exec(length);
 
   if (!length) {
-    return Number.MAX_VALUE;
+    return 0;
   }
 
   let num = length[1];
