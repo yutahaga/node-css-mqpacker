@@ -63,6 +63,11 @@ function inspectLength(length) {
   }
 
   let num = length[1];
+
+  if (length.length < 3) {
+    return parseFloat(num);
+  }
+
   const unit = length[2];
 
   switch (unit) {
