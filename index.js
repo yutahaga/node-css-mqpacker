@@ -133,6 +133,9 @@ function sortQueryLists(queryLists, sort) {
     };
   })
     .sort((a, b) => {
+      if (a.value === b.value) {
+        return queryLists[a.index].localeCompare(queryLists[b.index]);
+      }
       return a.value - b.value;
     })
     .map((e) => {
